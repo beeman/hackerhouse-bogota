@@ -1,13 +1,5 @@
-import { Deck, Heading, Slide } from "spectacle";
+import { Presentation } from "./presentation";
 
-function App() {
-  return (
-    <Deck>
-      <Slide>
-        <Heading>Welcome to Spectacle</Heading>
-      </Slide>
-    </Deck>
-  );
+export function App() {
+  return <Presentation />;
 }
-
-export default App;
