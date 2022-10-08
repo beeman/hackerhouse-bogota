@@ -60,7 +60,7 @@ export const Presentation = () => (
         'Ecosystem of +50 apps',
         'Users can spend and earn Kin',
         'KRE rewards developers for their economic activity',
-        'Focus on non-crypto savvy users and devs',
+        'Focus on non-crypto native users and devs',
       ]}
     />
     <SlideLayout.List
