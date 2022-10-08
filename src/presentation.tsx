@@ -1,6 +1,5 @@
 import {
   AnimatedProgress,
-  Appear,
   Box,
   CodePane,
   Deck,
@@ -22,21 +21,17 @@ import {
 } from './code/make-transaction'
 import { sdks } from './code/sdk-list'
 
-const beemanAvatar = 'https://avatars.githubusercontent.com/u/36491?v=4'
-
 const kinBanner = require('./images/kin-banner.png')
 const kinTheLargest = require('./images/kin-the-largest.jpg')
 const makeTransferAfter = require('./images/make-transfer-after.png')
 const makeTransferBefore = require('./images/make-transfer-before.png')
 
-// SPECTACLE_CLI_THEME_START
 const theme = {
   fonts: {
     header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
     text: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
   },
 }
-// SPECTACLE_CLI_THEME_END
 
 // SPECTACLE_CLI_TEMPLATE_START
 export const template = () => (
@@ -48,24 +43,6 @@ export const template = () => (
       <AnimatedProgress />
     </Box>
   </FlexBox>
-)
-// SPECTACLE_CLI_TEMPLATE_END
-
-export const SlideFragments = () => (
-  <>
-    <Slide>
-      <Text>This is a slide fragment.</Text>
-    </Slide>
-    <Slide>
-      <Text>This is also a slide fragment.</Text>
-      <Appear>
-        <Text>This item shows up!</Text>
-      </Appear>
-      <Appear>
-        <Text>This item also shows up!</Text>
-      </Appear>
-    </Slide>
-  </>
 )
 
 export const Presentation = () => (
@@ -95,7 +72,6 @@ export const Presentation = () => (
         '~32K per hour',
         '~540 per minute',
         '~9 per second',
-        '14% of all* Solana Txs',
       ]}
     />
     <Slide backgroundColor={'inherit'}>
@@ -110,7 +86,7 @@ export const Presentation = () => (
         'An ecosystem of +40 apps',
         'Largest token on Solana',
         'Give your users a token with real value',
-        'Get paid for your economic activity',
+        'YOU Get paid for your economic activity',
         '➡️ Sign up at: portal.kin.org',
       ]}
     />
@@ -123,7 +99,7 @@ export const Presentation = () => (
         'Works with any Solana SPL token',
         'Focused on making in-app payments EASY',
         'Onboard your users without SOL in their wallet',
-        'Provides the a Kinetic SDK Standard',
+        'Following the Kinetic SDK Standard',
       ]}
     />
     <SlideLayout.List
@@ -163,7 +139,15 @@ export const Presentation = () => (
         <Image src={makeTransferAfter} width={'50%'} />
       </FlexBox>
     </Slide>
-
+    <Slide>
+      <CodePane language="typescript" showLineNumbers={false}>
+        {makeTransferKinetic}
+      </CodePane>
+      <Box p={2} />
+      <CodePane language="dart" showLineNumbers={false}>
+        {makeTransferKineticDart}
+      </CodePane>
+    </Slide>
     <Slide>
       <Grid gridTemplateColumns="1fr 1fr " gridTemplateRows=" 1fr 1fr" gridRowGap={1}>
         {sdks.map(({ image, name }, index) => (
@@ -177,16 +161,6 @@ export const Presentation = () => (
           </FlexBox>
         ))}
       </Grid>
-    </Slide>
-
-    <Slide>
-      <CodePane language="typescript" showLineNumbers={false}>
-        {makeTransferKinetic}
-      </CodePane>
-      <Box p={2} />
-      <CodePane language="dart" showLineNumbers={false}>
-        {makeTransferKineticDart}
-      </CodePane>
     </Slide>
 
     <Slide>
