@@ -57,20 +57,20 @@ export const Presentation = () => (
         'Launched in 2018 by Kik',
         'Migrated to Solana in December 2020',
         'Cryptocurrency for in-app payments',
-        'Ecosystem of +40 apps',
+        'Ecosystem of +50 apps',
         'Users can spend and earn Kin',
-        'Developers are rewarded for their economic activity',
+        'KRE rewards developers for their economic activity',
         'Focus on non-crypto savvy users and devs',
       ]}
     />
     <SlideLayout.List
       title="Kin in numbers"
       items={[
+        '~1.8 million monthly active spenders',
         '~280 million transactions (year to date)',
         '~23 million per month',
         '~780K per day',
         '~32K per hour',
-        '~540 per minute',
         '~9 per second',
       ]}
     />
@@ -190,6 +190,7 @@ export const Presentation = () => (
         'Sign up at: portal.kin.org',
         'Come talk to us!',
         'Ask us questions!',
+        'Do the Heavy Duty challenge!',
       ]}
     />
 
