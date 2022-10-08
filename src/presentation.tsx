@@ -185,6 +185,7 @@ export const Presentation = () => (
     <SlideLayout.List
       title="What's next for you?"
       items={[
+        '🐦 Follow @Kin_Ecosystem',
         '⭐️ github.com/kin-labs/kinetic ⭐',
         'Check our docs: developer.kin.org',
         'Sign up at: portal.kin.org',
